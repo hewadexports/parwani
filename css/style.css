@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background: #2cb9d9;
+}
+
+::selection {
+  color: #ffffff;
+  background: #2cb9d9;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+:focus * {
+  outline: 0;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  line-height: 1;
+}
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+svg {
+  object-fit: contain;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 19px;
+}
+
+.container {
+  max-width: 1210px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text__center {
+  text-align: center;
+}
+
+/* Header Area */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 55px 0;
+}
+
+.sticky {
+  position: fixed;
+  background-color: #00c2bf;
+  padding: 15px 0;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo a {
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.header__wrapper ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  color: #ff0;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: color 0.1s 0s ease-in-out;
+  -webkit-transition: color 0.1s 0s ease-in-out;
+  -moz-transition: color 0.1s 0s ease-in-out;
+  -ms-transition: color 0.1s 0s ease-in-out;
+  -o-transition: color 0.1s 0s ease-in-out;
+}
+
+.nav__link:hover,
+.nav__link.active {
+  color: #fff;
+}
+
+.sticky .nav__link {
+  transition: background-color 170ms ease-in-out;
+  -webkit-transition: background-color 170ms ease-in-out;
+  -moz-transition: background-color 170ms ease-in-out;
+  -ms-transition: background-color 170ms ease-in-out;
+  -o-transition: background-color 170ms ease-in-out;
+}
+
+.sticky .header__logo {
+  display: none;
+}
+
+.sticky .header__wrapper {
+  justify-content: center;
+}
+
+.header__left-items li {
+  margin-right: 40px;
+}
+
+.header__left-items li:last-of-type {
+  margin-right: 0;
+}
+
+.sticky .header__right-items {
+  margin-left: 40px;
+}
+
+.header__right-items li {
+  margin-left: 40px;
+}
+
+.header__right-items li:first-of-type {
+  margin-left: 0;
+}
+
+/* Hamburger Icon */
+
+.navbar-toggler {
+  display: none;
+}
+
+.navbar-toggler {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.navbar-toggler .toggler-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.toggler-btn .bar {
+  width: 22px;
+  display: block;
+  height: 2px;
+  background: #ff0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  margin-bottom: 5px;
+}
+
+.toggler-btn .bar:nth-child(3) {
+  margin-bottom: 0;
+}
+
+.navbar-toggler.change .toggler-btn .bar1 {
+  transform: rotate(-45deg) translate(-4px, 4px);
+  -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+  -moz-transform: rotate(-45deg) translate(-4px, 4px);
+  -ms-transform: rotate(-45deg) translate(-4px, 4px);
+  -o-transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.navbar-toggler.change .toggler-btn .bar2 {
+  opacity: 0;
+}
+
+.navbar-toggler.change .toggler-btn .bar3 {
+  transform: rotate(45deg) translate(-6px, -6px);
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  -moz-transform: rotate(45deg) translate(-6px, -6px);
+  -ms-transform: rotate(45deg) translate(-6px, -6px);
+  -o-transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.active-toggle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 194, 191, 0.97);
+  transition: background-color 300ms ease-in-out;
+  -webkit-transition: background-color 300ms ease-in-out;
+  -moz-transition: background-color 300ms ease-in-out;
+  -ms-transition: background-color 300ms ease-in-out;
+  -o-transition: background-color 300ms ease-in-out;
+}
+
+/* Hamburger Icon */
+
+/* Header Area */
+
+/* Hero Banner */
+.hero__banner {
+  background-image: url(../images/hero-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding-top: 230px;
+  padding-bottom: 175px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__banner-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-right: 330px;
+}
+
+.hero__banner-content h1,
+.events__heading {
+  font-size: 54px;
+  line-height: 65px;
+  font-weight: 400;
+}
+
+.social__lists {
+  display: flex;
+  margin-top: 30px;
+}
+
+.social__lists li a {
+  border: 2px solid #fff;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: background-color 170ms ease-in-out;
+  -webkit-transition: background-color 170ms ease-in-out;
+  -moz-transition: background-color 170ms ease-in-out;
+  -ms-transition: background-color 170ms ease-in-out;
+  -o-transition: background-color 170ms ease-in-out;
+}
+
+.social__lists li a svg {
+  width: auto;
+  height: 22px;
+  object-fit: contain;
+  fill: #fff;
+  transition: fill 170ms ease-in-out;
+  -webkit-transition: fill 170ms ease-in-out;
+  -moz-transition: fill 170ms ease-in-out;
+  -ms-transition: fill 170ms ease-in-out;
+  -o-transition: fill 170ms ease-in-out;
+}
+
+.social__lists li a:hover {
+  background: #fff;
+}
+
+.social__lists li a:hover svg {
+  fill: #000;
+}
+
+/* Hero Banner */
+
+/* Events Area */
+.events__area {
+  background-image: url(../images/events.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 115px 0;
+}
+
+.events__heading {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.event__lists {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 50px 40px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.event__list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 30px 0;
+}
+
+.event__list:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.event__list > div:last-of-type {
+  margin-right: 0;
+}
+
+.event__list > div > h5 {
+  width: max-content;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 7px;
+}
+
+.event__list > div > p {
+  width: max-content;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.event__ticket {
+  display: flex;
+  align-items: center;
+}
+
+.event__ticket a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.event__ticket a:hover {
+  text-decoration: underline;
+}
+
+/* Events Area */
+
+/* About Area */
+
+.about__area {
+  background-image: url(../images/about.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 80px;
+}
+
+.about__content {
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+}
+
+.about__content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 15px;
+}
+
+.about__content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.about__content p a {
+  color: #ff0 !important;
+  display: inline;
+}
+
+/* About Area */
+
+/* Video Area */
+.video__area {
+  padding: 110px 0;
+  background: url(../images/video.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.section__title h3 {
+  font-size: 96px;
+  line-height: 110px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: rgb(220, 56, 108);
+  text-transform: uppercase;
+}
+
+.video__items {
+  max-width: 1015px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.video__inquires {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.video__inquires p,
+.video__inquires a {
+  color: #dc386c;
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.video__inquires a {
+  display: inline;
+  color: #ff0 !important;
+  font-weight: 600 !important;
+  margin-left: 5px;
+}
+
+/* Video Area */
+
+/* Footer Area */
+.footer {
+  background-color: #c33763;
+  padding-top: 70px;
+  padding-bottom: 90px;
+}
+
+.footer__content {
+  text-align: center;
+}
+
+.footer__content h5 {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__content a {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin-top: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 2px;
+}
+
+.footer__content a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.footer .social__lists {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .social__lists li a {
+  width: 28px;
+  height: 28px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.footer .social__lists li a svg {
+  height: 14px;
+}
+
+/* Footer Area */
